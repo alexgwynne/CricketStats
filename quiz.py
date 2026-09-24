@@ -49,6 +49,14 @@ question_label.pack(anchor="w", pady=(8, 6))
 #Options to the questions
 options_frame = ttk.Frame(main)
 options_frame.pack(fill="x", pady=(0, 8))
+option_buttons = []
+
+#This stores the chosen option
+selected_answer = tk.StringVar(value="")
+
+#This code gives the user feedback about their answer given to the previous question
+feedback_label = ttk.Label(main, text="", foreground="#333")
+feedback_label.pack(anchor="w", pady=(4, 8))
 
 #Required at the end of the python program for it to work
 root.mainloop()
