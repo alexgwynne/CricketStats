@@ -19,6 +19,14 @@ quizquestions = [
     {"question": "What is the maximum number of fielders the fielding team can have behind the 90-degree angle on the leg side of the pitch?", "options": ["1", "2", "As many as they like"], "answer": "2"},
 ]
 
+#Variables
+#The question number that the user is up to
+question_number = 0
+#The score that the user is on
+score = 0
+#The answer the user has selected
+selected_answer = None
+
 #'root' code is for the main window that the graphical interface appears in
 root = tk.Tk()
 root.title("Cricket Rules Quiz")
