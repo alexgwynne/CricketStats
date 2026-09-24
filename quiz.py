@@ -107,7 +107,15 @@ def load_question():
         rb.pack(anchor="w", pady=2)
         option_buttons.append(rb)
 
+#Code for the user to be able to submit an answer and receive feedback from their chosen answer
+def submit_answer():
+    global score
+    choice = selected_answer.get()
 
+#If the user tries to not select any answer to a question this code will be used
+    if choice == "":
+        messagebox.showinfo("Please select an answer")
+        return
 
 #Required at the end of the python program for it to work
 root.mainloop()
