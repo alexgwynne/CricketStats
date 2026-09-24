@@ -78,5 +78,19 @@ quit_btn.pack(side="right")
 def progress_update():
     progress_label.config(text=f"Question{question_number + 1} of {len(quizquestions)} Score: {score}")
 
+#This code resets the option buttons to the options for the question the user is up to
+def clear_options():
+    for rb in option_buttons:
+        rb.destroy()
+    option_buttons.clear()
+
+#This code resets the buttons to the correct state after each question so that the user can submit their answer again and can't go to the next question without answering
+def load_question():
+    progress_update()
+    feedback_label.config(text="")
+    submit_btn.config(state="normal")
+    next_btn.config(state="disabled")
+    selected_answer.set("")
+
 #Required at the end of the python program for it to work
 root.mainloop()
