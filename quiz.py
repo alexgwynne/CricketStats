@@ -58,5 +58,20 @@ selected_answer = tk.StringVar(value="")
 feedback_label = ttk.Label(main, text="", foreground="#333")
 feedback_label.pack(anchor="w", pady=(4, 8))
 
+#Buttons for the user to interact /Submit answer/Next question/Quit quiz/
+buttons = ttk.Frame(main)
+buttons.pack(fill="x", pady=(8,0))
+#Submit Button
+submit_btn = ttk.Button(buttons, text="Submit Answer")
+submit_btn.pack(side="left")
+#Next Question Button
+#State is set to 'disabled' because the next button can't be pushed before the question is answered
+next_btn = ttk.Button(buttons, text="Next Question", state="disabled")
+next_btn.pack(side="left", padx=(8,0))
+#Quit Button
+quit_btn = ttk.Button(buttons, text="Quit", command=root.destroy)
+quit_btn.pack(side="right")
+
+
 #Required at the end of the python program for it to work
 root.mainloop()
