@@ -41,5 +41,14 @@ main.pack(fill="both", expand=True)
 progress_label = ttk.Label(main, text="")
 progress_label.pack(anchor="e")
 
+#Questions
+#This will appear on the left side of the window
+question_label = ttk.Label(main, text="", wraplength=480, justify="left", font=("Segoe UI", 12, "bold"))
+question_label.pack(anchor="w", pady=(8, 6))
+
+#Options to the questions
+options_frame = ttk.Frame(main)
+options_frame.pack(fill="x", pady=(0, 8))
+
 #Required at the end of the python program for it to work
 root.mainloop()
