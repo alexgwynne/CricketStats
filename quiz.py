@@ -92,5 +92,22 @@ def load_question():
     next_btn.config(state="disabled")
     selected_answer.set("")
 
+    #This code gets the current question number
+    q = quizquestions[question_number]
+    question_label.config(text=f"Question{question_number + 1}: {q['text']}")
+
+    clear_options()
+    for option_text in q["options"]:
+        rb = ttk.Radiobutton(
+            options_frame,
+            text=option_text,
+            value=option_text,
+            variable=selected_answer,
+        )
+        rb.pack(anchor="w", pady=2)
+        option_buttons.append(rb)
+
+
+
 #Required at the end of the python program for it to work
 root.mainloop()
