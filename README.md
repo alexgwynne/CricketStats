@@ -1,2 +1,2 @@
-# CricketStats
-App for cricket stats tracking
+# CricketQuiz
+App for cricket quiz
