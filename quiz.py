@@ -72,6 +72,11 @@ next_btn.pack(side="left", padx=(8,0))
 quit_btn = ttk.Button(buttons, text="Quit", command=root.destroy)
 quit_btn.pack(side="right")
 
+#This code tells the user what question they are up to and out of how many questions
+#'question_number' calls back to the code under the 'variable' label above and prints the question number that is one value above what was previously stored
+#'quizquestions' calls back to the dictionaries containing the questions. They are counted and printed as a number using the 'len' code
+def progress_update():
+    progress_label.config(text=f"Question{question_number + 1} of {len(quizquestions)} Score: {score}")
 
 #Required at the end of the python program for it to work
 root.mainloop()
