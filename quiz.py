@@ -32,5 +32,10 @@ root = tk.Tk()
 root.title("Cricket Rules Quiz")
 root.geometry("500x400")
 
+#Progress Bar
+#This will appear on the right of the window
+progress_label = ttk.Label(main, text="")
+progress_label.pack(anchor="e")
+
 #Required at the end of the python program for it to work
 root.mainloop()
