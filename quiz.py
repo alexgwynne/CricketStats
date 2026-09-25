@@ -76,7 +76,7 @@ quit_btn.pack(side="right")
 #'question_number' calls back to the code under the 'variable' label above and prints the question number that is one value above what was previously stored
 #'quizquestions' calls back to the dictionaries containing the questions. They are counted and printed as a number using the 'len' code
 def progress_update():
-    progress_label.config(text=f"Question{question_number + 1} of {len(quizquestions)} Score: {score}")
+    progress_label.config(text=f"Question {question_number + 1} of {len(quizquestions)} Score: {score}")
 
 #This code resets the option buttons to the options for the question the user is up to
 def clear_options():
@@ -94,7 +94,7 @@ def load_question():
 
     #This code gets the current question number
     q = quizquestions[question_number]
-    question_label.config(text=f"Question{question_number + 1}: {q['question']}")
+    question_label.config(text=f"Question {question_number + 1}: {q['question']}")
 
     clear_options()
     for option_text in q["options"]:
