@@ -114,7 +114,7 @@ def submit_answer():
 
 #If the user tries to not select any answer to a question this code will be used
     if choice == "":
-        messagebox.showinfo("Please select an answer")
+        messagebox.showinfo("Select an answer")
         return
 
     correct = quizquestions[question_number]["answer"]
