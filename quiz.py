@@ -140,9 +140,18 @@ def next_question():
     else:
         finish_quiz()
 
-def finish_quiz ():
-    
-    
+def finish_quiz():
+    percent = int((score / len(quizquestions)) * 100)
+    again = messagebox.askyesno("Quiz is complete", f"You scored {score} out of {len(quizquestions)}. \n\nPlay again?")
+    if again:
+        restart_quiz()
+    else:
+        root.destroy()
+
+def restart_quiz():
+
+
+
 
 #Required at the end of the python program for it to work
 root.mainloop()
