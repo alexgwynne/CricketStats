@@ -94,7 +94,7 @@ def load_question():
 
     #This code gets the current question number
     q = quizquestions[question_number]
-    question_label.config(text=f"Question{question_number + 1}: {q['text']}")
+    question_label.config(text=f"Question{question_number + 1}: {q['question']}")
 
     clear_options()
     for option_text in q["options"]:
@@ -158,6 +158,8 @@ def restart_quiz():
 #Links the buttons to their purpose
 submit_btn.config(command=submit_answer)
 next_btn.config(command=next_question)
+
+load_question()
 
 #Required at the end of the python program for it to work
 root.mainloop()
