@@ -148,10 +148,16 @@ def finish_quiz():
     else:
         root.destroy()
 
+#Code to restart the quiz after the user has played it
 def restart_quiz():
+    global question_number, score
+    question_number = 0
+    score = 0
+    load_question()
 
-
-
+#Links the buttons to their purpose
+submit_btn.config(command=submit_answer)
+next_btn.config(command=next_question)
 
 #Required at the end of the python program for it to work
 root.mainloop()
