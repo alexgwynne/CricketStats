@@ -140,7 +140,8 @@ def next_question():
     else:
         finish_quiz()
 
-def
+def finish_quiz ():
+    
     
 
 #Required at the end of the python program for it to work
