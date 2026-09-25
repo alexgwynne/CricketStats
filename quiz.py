@@ -126,8 +126,21 @@ def submit_answer():
     else:
         feedback_label.config(text=f"Incorrect. Answer was, {correct}")
 
+#Prevents multiple submissions
     submit_btn.config(state="disabled")
     next_btn.config(state="normal")
+
+#This code takes the user to the next question and checks if there is another question. The 'if' statement takes the user to the next question, the 'else' statement finishes the quiz if all questions are done
+def next_question():
+    global question_number
+    question_number += 1
+
+    if question_number < len(quizquestions):
+        load_question()
+    else:
+        finish_quiz()
+
+def
     
 
 #Required at the end of the python program for it to work
