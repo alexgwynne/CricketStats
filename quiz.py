@@ -117,5 +117,15 @@ def submit_answer():
         messagebox.showinfo("Please select an answer")
         return
 
+    correct = quizquestions[question_number]["answer"]
+
+#This code runs when the user submits a valid answer. The 'if' is for the correct answer and the 'else' is for the incorrect answers
+    if choice == correct:
+        score += 1
+        feedback_label.config(text="Correct!")
+    else:
+        feedback_label.config(text=f"Incorrect. Answer was, {correct}")
+    
+
 #Required at the end of the python program for it to work
 root.mainloop()
