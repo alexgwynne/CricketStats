@@ -125,6 +125,9 @@ def submit_answer():
         feedback_label.config(text="Correct!")
     else:
         feedback_label.config(text=f"Incorrect. Answer was, {correct}")
+
+    submit_btn.config(state="disabled")
+    next_btn.config(state="normal")
     
 
 #Required at the end of the python program for it to work
